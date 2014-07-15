@@ -22,6 +22,8 @@ public class TenisMarcador extends javax.swing.JFrame {
         private int ScoreP1 = 0;
 	private int ScoreP2 = 0;
         private Idiomas idioma;
+        public String jugador1;
+        public String jugador2;
         
         
 
@@ -44,6 +46,12 @@ public class TenisMarcador extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,38 +132,61 @@ public class TenisMarcador extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getColumn(2).setPreferredWidth(200);
 
+        jLabel2.setText("Nombre Jugador 1");
+
+        jLabel3.setText("Nombre Jugador 2");
+
+        jButton8.setText("Agregar Jugador");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("JUGADORES");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(113, 113, 113)
-                                        .addComponent(jButton5)
-                                        .addGap(37, 37, 37)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jButton3))
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton7))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
-                        .addGap(18, 18, 18)
+                        .addGap(47, 47, 47)
                         .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)))
-                .addGap(0, 13, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton2)
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jButton8))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton3)
+                                .addGap(27, 27, 27)
+                                .addComponent(jButton5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton7))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton6))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,16 +197,31 @@ public class TenisMarcador extends javax.swing.JFrame {
                     .addComponent(jButton5)
                     .addComponent(jButton7)
                     .addComponent(jButton4))
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(jButton6)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(jButton6)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(jButton8)
+                        .addGap(71, 71, 71))))
         );
 
         pack();
@@ -234,6 +280,10 @@ public class TenisMarcador extends javax.swing.JFrame {
        jButton5.setVisible(true);
        jButton7.setVisible(true);
        
+       jButton1.setText("jugador1");
+       jButton2.setText("jugador2");
+       jTextField1.setText(" ");
+       jTextField2.setText(" ");
        borrarTabla(0);
        imprimirTabla();
        
@@ -256,6 +306,13 @@ public class TenisMarcador extends javax.swing.JFrame {
         borrarTabla(row+1);
         jLabel1.setText(score());
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        jugador1=jTextField1.getText();
+        jugador2=jTextField2.getText();
+        jButton1.setText(jugador1);
+        jButton2.setText(jugador2);
+    }//GEN-LAST:event_jButton8ActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -330,9 +387,9 @@ public class TenisMarcador extends javax.swing.JFrame {
 
 	private String MarcadorMasAlto() {
 		if (ScoreP1 > ScoreP2) {
-			return "1";
+			return jTextField1.getText();//+getIdioma().getPlayer()+ " 1";
 		} else {
-			return "2";
+			return jTextField2.getText();//+getIdioma().getPlayer()+ " 2";
 		}
 	}
 
@@ -389,9 +446,15 @@ public class TenisMarcador extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
 
@@ -404,6 +467,7 @@ interface Idiomas {
     public String getDeuce();
     public String getAdvantage();
     public String getWin();
+    public String getPlayer();
 }
 ////////////////////////////////////////////////////INGLES
 class IdiomaIngles implements Idiomas{
@@ -439,12 +503,17 @@ class IdiomaIngles implements Idiomas{
 
     @Override
     public String getAdvantage() {
-        return "Advantage Player";
+        return "Advantage for";
     }
 
     @Override
     public String getWin() {
-        return "Wins Player";
+        return "Wins";
+    }
+    
+    @Override
+    public String getPlayer() {
+        return "Player";
     }
 }
 ////////////////////////////////////////////////////ESPAÑOL
@@ -481,12 +550,17 @@ class IdiomaEspanol implements Idiomas{
 
     @Override
     public String getAdvantage() {
-        return "Ventaja Jugador";
+        return "Ventaja para";
     }
 
     @Override
     public String getWin() {
-        return "Gana Jugador";
+        return "Gana";
+    }
+    
+    @Override
+    public String getPlayer() {
+        return "Jugador";
     }
 }
 ////////////////////////////////////////////////////FRANCES
@@ -523,12 +597,17 @@ class IdiomaFrances implements Idiomas{
 
     @Override
     public String getAdvantage() {
-        return "Avantage Joueur";
+        return "Avantage pour";
     }
 
     @Override
     public String getWin() {
-        return "Désir Joueur";
+        return "Désir";
+    }
+    
+    @Override
+    public String getPlayer() {
+        return "Joueur";
     }
 }
 ////////////////////////////////////////////////////ALEMAN
@@ -565,11 +644,16 @@ class IdiomaAleman implements Idiomas{
 
     @Override
     public String getAdvantage() {
-        return "Bewegt sich Spieler";
+        return "Vorteil für";
     }
 
     @Override
     public String getWin() {
-        return "Gewinnt Spieler";
+        return "Gewinnt";
+    }
+    
+    @Override
+    public String getPlayer() {
+        return "Spieler";
     }
 }
