@@ -22,6 +22,7 @@ public class TenisMarcador extends javax.swing.JFrame {
         private int ScoreP1 = 0;
 	private int ScoreP2 = 0;
         private Idiomas idioma;
+        private Idiomas idiomas;
         public String jugador1;
         public String jugador2;
         
@@ -39,9 +40,17 @@ public class TenisMarcador extends javax.swing.JFrame {
         jFrame1 = new javax.swing.JFrame();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jButton5 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jFrame2 = new javax.swing.JFrame();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -52,10 +61,6 @@ public class TenisMarcador extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
 
         jFrame1.setLocationByPlatform(true);
         jFrame1.setPreferredSize(new java.awt.Dimension(376, 224));
@@ -86,6 +91,34 @@ public class TenisMarcador extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable2);
         jTable2.getColumnModel().getColumn(2).setPreferredWidth(200);
 
+        jButton5.setText("frances");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("ingles");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("español");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("Aleman");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
         jFrame1Layout.setHorizontalGroup(
@@ -93,13 +126,31 @@ public class TenisMarcador extends javax.swing.JFrame {
             .addGroup(jFrame1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jFrame1Layout.setVerticalGroup(
             jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrame1Layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton7))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -129,6 +180,34 @@ public class TenisMarcador extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTable3);
         jTable3.getColumnModel().getColumn(2).setPreferredWidth(200);
 
+        jButton9.setText("frances");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("ingles");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("español");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Aleman");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
         jFrame2.getContentPane().setLayout(jFrame2Layout);
         jFrame2Layout.setHorizontalGroup(
@@ -136,13 +215,31 @@ public class TenisMarcador extends javax.swing.JFrame {
             .addGroup(jFrame2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame2Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jFrame2Layout.setVerticalGroup(
             jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrame2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrame2Layout.createSequentialGroup()
+                        .addComponent(jButton11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton12))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -186,34 +283,6 @@ public class TenisMarcador extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("JUGADORES");
 
-        jButton7.setText("Aleman");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("español");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("ingles");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setText("frances");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -229,21 +298,11 @@ public class TenisMarcador extends javax.swing.JFrame {
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton6)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jButton6)))
+                .addContainerGap(116, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -257,30 +316,18 @@ public class TenisMarcador extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton8))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton7)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton8)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -303,6 +350,7 @@ public class TenisMarcador extends javax.swing.JFrame {
         jLabel1.setText(score());
         ///Tabla
         imprimirTabla();
+        TablaInvertida();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -310,6 +358,7 @@ public class TenisMarcador extends javax.swing.JFrame {
         jLabel1.setText(score());
         ///Tabla
         imprimirTabla();
+        TablaInvertida();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -350,13 +399,19 @@ public class TenisMarcador extends javax.swing.JFrame {
        jButton4.setVisible(true);
        jButton5.setVisible(true);
        jButton7.setVisible(true);
+       jButton9.setVisible(true);
+       jButton10.setVisible(true);
+       jButton11.setVisible(true);
+       jButton12.setVisible(true);
        
        jButton1.setText("jugador1");
        jButton2.setText("jugador2");
        jTextField1.setText(" ");
        jTextField2.setText(" ");
        borrarTabla(0);
-       imprimirTabla();     
+       imprimirTabla();
+       TablaInvertida();    
+       jLabel1.setText(score());
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -399,6 +454,42 @@ public class TenisMarcador extends javax.swing.JFrame {
         borrarTabla(row+1);
         jLabel1.setText(score());
     }//GEN-LAST:event_jTable3MouseClicked
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        jButton10.setVisible(false);
+        jButton11.setVisible(false);
+        jButton12.setVisible(false);
+        idiomas= new IdiomaFrances();
+        
+        TablaInvertida();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        jButton9.setVisible(false);
+        jButton11.setVisible(false);
+        jButton12.setVisible(false);
+        idiomas= new IdiomaIngles();
+        
+        TablaInvertida();
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        jButton9.setVisible(false);
+        jButton10.setVisible(false);
+        jButton12.setVisible(false);
+        idiomas= new IdiomaEspanol();
+        
+        TablaInvertida();
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        jButton9.setVisible(false);
+        jButton10.setVisible(false);
+        jButton11.setVisible(false);
+        idiomas= new IdiomaAleman();
+        
+        TablaInvertida();
+    }//GEN-LAST:event_jButton12ActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -513,28 +604,64 @@ public class TenisMarcador extends javax.swing.JFrame {
 		throw new IllegalArgumentException("Illegal score: " + score);
         }
        
+       //////////////////////////////////////////////////////////////////idiomas tabla 2
+    public String score2() {
+                if (ganador()) {
+			return getIdiomas().getWin()+" "+MarcadorMasAlto();
+		}
+
+		if (TieneVentaja()) { 
+			return getIdiomas().getAdvantage() +" "+MarcadorMasAlto(); 
+		}
+
+		if (Empate())
+			return getIdiomas().getDeuce();
+
+		if(ScoreP1 == ScoreP2) {
+			return CambiaScore2(ScoreP1) +" "+getIdiomas().getAll();
+		}
+                return CambiaScore2(ScoreP1) + " - " + CambiaScore2(ScoreP2);
+	}
+    
+       private String CambiaScore2(int score) {
+           switch (score) {
+		case 3:
+			return getIdiomas().getForty();
+		case 2:
+			return getIdiomas().getThirty();
+		case 1: 
+			return getIdiomas().getFifteen();
+		case 0:
+			return getIdiomas().getZero();
+            }
+		throw new IllegalArgumentException("Illegal score: " + score);
+        }
        /////////////////////////////////////////////////////////////////TABLAS
         void imprimirTabla(){
             DefaultTableModel modelo = (DefaultTableModel) jTable2.getModel();
             modelo.addRow(new Object[]{ScoreP1,ScoreP2,score()});
-            TablaInvertida();
+            //TablaInvertida();
         }
         void borrarTabla(int row){
             DefaultTableModel modelo = (DefaultTableModel) jTable2.getModel();
             while (row < modelo.getRowCount()){
                 modelo.removeRow(row);
             }
-            borrarTablaInvertida(row);
+            borrarTabla2(row);
         }
-        void TablaInvertida(){
+        /*void TablaInvertida(){
             DefaultTableModel modelo = (DefaultTableModel) jTable2.getModel();
             DefaultTableModel modelo2 = (DefaultTableModel) jTable3.getModel();
-            borrarTablaInvertida(0);
+            borrarTabla2(0);
             for (int row=modelo.getRowCount()-1; row>=0;row--){
                 modelo2.addRow(new Object[]{jTable2.getValueAt(row, 0),jTable2.getValueAt(row, 1),jTable2.getValueAt(row, 2),score()});
             }
+        }*/
+        void TablaInvertida(){
+            DefaultTableModel modelo = (DefaultTableModel) jTable3.getModel();
+            modelo.insertRow(0, new Object[]{ScoreP1,ScoreP2,score2()});
         }
-        void borrarTablaInvertida(int row){
+        void borrarTabla2(int row){
             DefaultTableModel modelo = (DefaultTableModel) jTable3.getModel();
             while ((modelo.getRowCount()-row)>0){
                 modelo.removeRow(0);
@@ -546,8 +673,18 @@ public class TenisMarcador extends javax.swing.JFrame {
         private Idiomas getIdioma(){
             return idioma;
         }
+        ////////////////////////////////////////////////////idiomas tabla2
+        private void setIdiomas(Idiomas idiomas){
+            this.idiomas= idiomas;
+        }
+        private Idiomas getIdiomas(){
+            return idiomas;
+        }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -555,6 +692,7 @@ public class TenisMarcador extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
